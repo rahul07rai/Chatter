@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chatter</title>
+</head>
+<body>
+	<h1>Online Users for {{ sign }}</h1>
+	<table>
+		<tr>
+			<th>Signature</th>
+		</tr>
+		{% for name in frnd_list %}
+			<tr>
+				<td>{{ name }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+	<form method="POST">
+		sign2 : <input type="text" name="sign2" /><br /><br />
+		<input type="submit" name="submit" value="Connect">
+	</form>
+</body>
+</html>

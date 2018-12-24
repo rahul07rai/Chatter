@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Chatter</title>
+<head>
+<body>
+	<h1>Welcome User {{ name1 }}</h1>
+	<div class="container">
+	<h4 class="display-4 text-center"> Chats </h4>
+	<form method="POST">
+		<hr>
+		<div class="chatBox" id="chatBox">
+			<div  id="request"></div>
+				text : <input type="text" name="text" />
+				<input type="submit" name="submit" value="Send">
+				{% if msg %}
+				<p>
+					<label name='msg'>{{ name1 }} : {{ msg }}</label>
+				</p>
+				{% endif %}
+		</div>
+	</form>
+	</div>
+</body>
+</html>

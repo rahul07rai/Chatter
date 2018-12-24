@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chatter</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="container">
+			<h1>Enter Credentials</h1>
+			<br>
+			<form action="" method="post">
+
+				<label for="username"><b>Username</b></label>
+				<input type="text" placeholder="Username" name="username" value="{{ 
+				request.form.username }}">
+
+				<label for="password"><b>Password</b></label>
+				<input type="password" placeholder="Password" name="password" value="{{ 
+				request.form.password }}">
+
+				<label for="contact"><b>Contact</b></label>
+				<input type="text" placeholder="Contact" name="contact" value="{{ 
+				request.form.contact }}">
+
+				<input class="btn-btn-default" type="submit" value="SignUp">
+			</form>
+			{% if error %}
+				<p class="error"><strong>Error :</strong> {{ error }}
+			{% endif %}
+		</div>
+	</body>
+</html>
+
